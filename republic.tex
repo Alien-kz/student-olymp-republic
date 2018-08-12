@@ -1,0 +1,139 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+
+\newcommand{\head}[5]{ %hoster city date
+	\addcontentsline{toc}{subsection}{#1 (#5)}
+	\begin{center}
+	#1 \\
+	#2 \\
+	#3 \\
+	#4 #5\\
+	\end{center}
+}
+\newcommand{\result}{
+	\begin{center}
+	\textbf{Результаты}
+	\end{center}
+}
+
+\begin{document}
+
+\newpage
+
+\addcontentsline{toc}{section}{О республиканской олимпиаде}
+
+Республиканская студенческая предметная олимпиада проводится ежегодно весной по поручению министерства образования и науки Республики Казахстан. Олимпиада по каждой специальности проводится отдельно. В данной брошюре собраны олимпиады по двум специальностям: <<Математика>>, <<Математическое и компьютерное моделирование>>. Впервые такая олимпиада прошла в 2009 году на базе Казахского национального университета имени аль-Фараби (г. Алматы). Вплоть до 2015 года олимпиада не меняла свое место проведения по этим направлениям. В 2016 году олимпиады по данным направлениям прошли в Казахстанского филиале МГУ имени М.~В.~Ломомносова (г. Астана), что стало традицией передавать право проведения олимпиады университету, представитель которого стал победителем в личном зачете.
+
+
+Задачи на олимпиадах, как правило, доступны хорошо подготовленным студентам 2-4 курса. Желающим углубить свои навыки в решении студенческих олимпиадных задач рекомендуется список литературы:
+
+\begin{enumerate}
+\item Садовничий В.А., Подколзин А.С. Задачи студенческих олимпиад по математике. М.: Наука. 1978. --- 208 с.
+\item Садовничий В.А., Григорьян А.А., Конягин С.В. Задачи студенческих математических олимпиад. Издательство МГУ, 1987. --- 309 с.
+\item Gelca R., Andreescu T. Putnam and Beyond. 2007. --- 850 pp.
+\item Меньшиков Ф. Олимпиадные задачи по программированию. 2007. --- 320 с.
+\end{enumerate}
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\addcontentsline{toc}{section}{Республиканская студенческая олимпиада по математике}
+
+\head{VI олимпиада}{Казахский национальный университет имени аль-Фараби}{Алматы}{27 марта}{2014}
+\input{problems/2014-rep-math.tex}
+
+\result
+\input{results/2014-rep-math-res.tex}
+\newpage
+
+
+\head{VII олимпиада}{Казахский национальный университет имени аль-Фараби}{Алматы}{26 марта}{2015}
+\input{problems/2015-rep-math.tex}
+
+\result
+\input{results/2015-rep-math-res.tex}
+
+\newpage
+
+
+\head{VIII олимпиада}{Казахстанский филиала МГУ имени М.В.Ломоносова}{Астана}{1 апреля}{2016}
+\input{problems/2016-rep-math.tex}
+
+\result
+\input{results/2016-rep-math-res.tex}
+
+\newpage
+
+
+\head{IX олимпиада}{Казахстанский филиала МГУ имени М.В.Ломоносова}{Астана}{13 апреля}{2017}
+\input{problems/2017-rep-math.tex}
+
+\result
+\input{results/2017-rep-math-res.tex}
+
+\newpage
+
+
+\head{X олимпиада}{Казахстанско-Британский технический университет}{Алматы}{3 апреля}{2018}
+\input{problems/2018-rep-math.tex}
+
+\result
+\input{results/2018-rep-math-res.tex}
+
+\newpage
+
+\addcontentsline{toc}{section}{Республиканская студенческая олимпиада по математическому и компьютерному моделированию}
+
+\head{VI олимпиада}{Казахский национальный университет имени аль-Фараби}{Алматы}{27 марта}{2014}
+\input{problems/2014-rep-mcm.tex}
+
+\result
+\input{results/2014-rep-mcm-res.tex}
+
+\newpage
+
+\head{VII олимпиада}{Казахский национальный университет имени аль-Фараби}{Алматы}{26 марта}{2015}
+\input{problems/2015-rep-mcm.tex}
+
+\result
+\input{results/2015-rep-mcm-res.tex}
+
+\newpage
+
+
+\head{VIII олимпиада}{Казахстанский филиала МГУ имени М.В.Ломоносова}{Астана}{1 апреля}{2016}
+\input{problems/2016-rep-mcm.tex}
+
+\result
+\input{results/2016-rep-mcm-res.tex}
+
+\newpage
+
+
+\head{IX олимпиада}{Назарбаев Университет}{Астана}{13 апреля}{2017}
+\input{problems/2017-rep-mcm.tex}
+
+\result
+\input{results/2017-rep-mcm-res.tex}
+
+\newpage
+
+
+\head{X олимпиада}{Назарбаев Университет}{Астана}{20 апреля}{2018}
+\input{problems/2018-rep-mcm.tex}
+
+\result
+\input{results/2018-rep-mcm-res.tex}
+
+\newpage
+\end{document}
