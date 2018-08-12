@@ -22,9 +22,9 @@ def replace_by_template(input_file, output_file, template, olymp):
 
 def make_pdf(directory, full_data):
 	print(directory)
-	os.chdir(directory)
 	with open('template.tex', 'r') as temp_file:
 		template = temp_file.read()
+		os.chdir(directory)
 		for olymp in full_data:
 			# print(olymp)
 			# ../../problems/math/2014.tex
@@ -33,8 +33,8 @@ def make_pdf(directory, full_data):
 			output_file = olymp['prefix'] + "-" + olymp['file'] + "-" + directory + ".tex"
 			print(output_file, end="\t")
 			print(replace_by_template(input_file, output_file, template, olymp))
-	os.system("rm *log *aux")
-	os.chdir("..")
+		os.system("rm *log *aux")
+		os.chdir("..")
 
 def parse_csv():
 	full_data = list()
