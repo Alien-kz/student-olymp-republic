@@ -1,24 +1,25 @@
 Структура:
 
+
 math
 |- republic.tex (сборник)
 |
 |- problems (данные)
-|  |- republic-math
+|  |- math
 |  |  |- 2014.tex
 |  |  |- 2015.tex
 |  |  |- ...
-|  |- republic-mcm
+|  |- mcm
 |  |  |- 2014.tex
 |  |  |- 2015.tex
 |  |  |- ...
 |
 |- results (данные)
-|  |- republic-math
+|  |- math
 |  |  |- 2014.tex
 |  |  |- 2015.tex
 |  |  |- ...
-|  |- republic-mcm
+|  |- mcm
 |  |  |- 2014.tex
 |  |  |- 2015.tex
 |  |  |- ...
@@ -31,6 +32,7 @@ math
 |  |- problems 
 |  |  |- republic-math-2014-problems.tex
 |  |  |- republic-math-2014-problems.pdf
+|  |  |- republic-math-2014-problems.png
 |  |  |- ...
 |  |
 |  |- results
@@ -38,40 +40,53 @@ math
 |  |  |- republic-math-2014-results.pdf
 |  |  |- ...
 
+
 ============================
 
-Как добавлять новую олимпиаду:
-1) problems/republic-math/2020.tex - условия
-2) results/republic-math/2020.tex - результаты
-3) republic.tex
+Добавить олимпиаду:
+
+1) problems/math/2020.tex - условия
+2) solutions/math/2020.tex - решения
+3) results/math/2020.tex - результаты
+4) yby/2020.txt
+	subdirectory, file, date, name, hoster, city
+	math, 2020, 27 марта 2020, XII Республиканская студенческая предметная олимпиада по~направлению~<<Математика>>, Назарбаев Университет, г. Астана 
+5) cd yby
+6) python3 generate.py png 2020.txt a4.tex problems
+7) python3 generate.py pdf 2020.txt a4.tex solutions
+8) python3 generate.py pdf 2020.txt a4.tex results
+6) python3 generate.py pdf 2020.txt a4.tex  ../problems/ problems/ republic- -problems
+7) python3 generate.py pdf 2020.txt a4.tex  ../solutions/ solutions/ republic- -solutions
+8) python3 generate.py pdf 2020.txt a4.tex  ../results/ results/ republic- -results
+
+============================
+
+Добавить в книгу:
+
+1) republic.tex
    добавить строки
-	\head{VI олимпиада}{Казахский национальный университет имени аль-Фараби}{Алматы}{27 марта}{2020}
-	\input{problems/republic-math/2020.tex}
 
-	\result
-	\input{results/republic-math/2020.tex}
-	\newpage
-4) year by year/list.txt
-	добавить строку
-	republic-math, 2020, 27 марта 2020, XX Республиканская студенческая предметная олимпиада по направлению \\ <<Математика>>, Казахский национальный университет имени аль-Фараби, г. Алматы 
+\head{XII олимпиада}{Назарбаев Университет}{Астана}{27 марта 2020}{2020}
+\input{problems/math/2020.tex}
+\result
+\input{results/math/2020.tex}
+\newpage
 
-
-============================
-
-Выполнить:
-1) pdflatex republic.tex
-2) cd /year\ by\ year
-3) python3 generate.py < list.txt
+2) pdflatex republic.tex
 
 ============================
 
 Добавить на сайт
-1) mymath.info/math/republic/problems/republic-math-2020-problems.tex
-2) mymath.info/math/republic/problems/republic-math-2020-problems.pdf
-3) mymath.info/math/republic/results/republic-math-2020-results.tex
-4) mymath.info/math/republic/results/republic-math-2020-results.pdf
-5) mymath.info/script/run.php
-math/republic/results/republic-math-2020-results
-6) исправить mymath.info/math/show.php
-if ($olymp == "republic")
-for ($y = 2014; $y <= 2020; $y++)
+
+0) cd yby
+1) python3 generate.py png 2020.txt a5.tex  ../problems/ ~/http/mymath.info/math/republic/problems/ republic- -problems
+   python3 generate.py pdf 2020.txt a4.tex  ../problems/ ~/http/mymath.info/math/republic/problems/ republic- -problems
+2) python3 generate.py pdf 2020.txt a4.tex  ../solutions/ ~/http/mymath.info/math/republic/solutions/ republic- -solutions
+3) python3 generate.py pdf 2020.txt a4.tex  ../results/ ~/http/mymath.info/math/republic/results/ republic- -results
+4) на странице mymath.info/script/run.php сгенерировать результаты
+   math/msu/results/msu-2020-results
+5) исправить mymath.info/math/show.php
+	if ($olymp == "msu")
+		for ($y = 2014; $y <= 2020; $y++)
+
+============================
