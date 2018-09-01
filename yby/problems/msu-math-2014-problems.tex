@@ -1,0 +1,72 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtext}
+
+\usepackage{comment}
+\usepackage{geometry}
+\geometry{left=0.5cm, right=1cm, top=1cm, bottom=1cm}
+\usepackage[inline]{enumitem}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\usepackage{wrapfig}
+\usepackage{fancybox,fancyhdr}
+\sloppy
+
+\setlength{\headheight}{28pt}
+\newcommand{\variant}[2]{
+	\begin{center}
+	\textit{Вариант #2}
+	\end{center}
+}
+
+\newcommand{\unit}[1]{\text{\textit{ #1}}}
+\newcommand{\units}[2]{ \frac{\text{\textit{#1}}}{\text{\textit{#2}}}}
+
+\newcommand{\head}[4]
+{
+	\fancyhf{}
+	\pagestyle{fancy}
+	\chead{#3, #4}
+
+	\begin{center}
+	\begin{large}
+	#1 \\
+	\textit{#2}\\
+	\end{large}
+	\end{center}
+
+}
+
+\begin{document}
+
+\head{VI Республиканская студенческая предметная олимпиада по~направлению~<<Математика>>}{27 марта 2014}{Казахский национальный университет имени аль-Фараби}{г. Алматы}
+
+\begin{enumerate}
+\item Вычислить предел:
+$$\lim_{x \to +\infty} \frac{(x - \sqrt{x^2 - 1})^n + (x + \sqrt{x^2 - 1})^n}{x^n}.$$
+
+\item Решить систему уравнений:
+$$
+\begin{cases}
+\frac{x^2}{y^2} + \frac{y^2}{z^2} + \frac{z^2}{x^2} = 3 \\
+x + y + z = 3 \\
+\frac{y^2}{x^2} + \frac{z^2}{y^2} + \frac{x^2}{z^2} = 3 \\
+\end{cases}
+$$
+
+\item Дан многочлен с целыми коэффициентами. В трех целых точках он принимает значение 2. Докажите, что ни в какой целой точке он не принимает значение 3.
+
+\item Найти все решения дифференциального уравнения второго порядка $$f''(x) + f(\pi - x) = 1.$$
+
+\end{enumerate}
+
+\end{document} 
