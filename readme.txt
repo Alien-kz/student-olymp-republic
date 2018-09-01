@@ -76,10 +76,10 @@ math
 Добавить на сайт
 
 0) cd yby
-1) python3 generate.py png 2020.txt a5.tex  ../problems/ ~/http/mymath.info/math/republic/problems/ republic- -problems
-   python3 generate.py pdf 2020.txt a4.tex  ../problems/ ~/http/mymath.info/math/republic/problems/ republic- -problems
-2) python3 generate.py pdf 2020.txt a4.tex  ../solutions/ ~/http/mymath.info/math/republic/solutions/ republic- -solutions
-3) python3 generate.py pdf 2020.txt a4.tex  ../results/ ~/http/mymath.info/math/republic/results/ republic- -results
+1) python3 generate.py png 2020.txt olymp-a5.tex  ../problems/ ~/http/mymath.info/math/republic/problems/ republic- -problems
+   python3 generate.py pdf 2020.txt olymp-a4.tex  ../problems/ ~/http/mymath.info/math/republic/problems/ republic- -problems
+2) python3 generate.py pdf 2020.txt olymp-a4.tex  ../solutions/ ~/http/mymath.info/math/republic/solutions/ republic- -solutions
+3) python3 generate.py pdf 2020.txt olymp-a4-land.tex  ../results/ ~/http/mymath.info/math/republic/results/ republic- -results
 4) на странице mymath.info/script/run.php сгенерировать результаты
    math/republic/results/republic-math-2020-results
 5) исправить mymath.info/math/show.php
