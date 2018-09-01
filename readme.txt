@@ -52,9 +52,6 @@ math
 	subdirectory, file, date, name, hoster, city
 	math, 2020, 27 марта 2020, XII Республиканская студенческая предметная олимпиада по~направлению~<<Математика>>, Назарбаев Университет, г. Астана 
 5) cd yby
-6) python3 generate.py png 2020.txt a4.tex problems
-7) python3 generate.py pdf 2020.txt a4.tex solutions
-8) python3 generate.py pdf 2020.txt a4.tex results
 6) python3 generate.py pdf 2020.txt a4.tex  ../problems/ problems/ republic- -problems
 7) python3 generate.py pdf 2020.txt a4.tex  ../solutions/ solutions/ republic- -solutions
 8) python3 generate.py pdf 2020.txt a4.tex  ../results/ results/ republic- -results
@@ -84,9 +81,9 @@ math
 2) python3 generate.py pdf 2020.txt a4.tex  ../solutions/ ~/http/mymath.info/math/republic/solutions/ republic- -solutions
 3) python3 generate.py pdf 2020.txt a4.tex  ../results/ ~/http/mymath.info/math/republic/results/ republic- -results
 4) на странице mymath.info/script/run.php сгенерировать результаты
-   math/msu/results/msu-2020-results
+   math/republic/results/republic-math-2020-results
 5) исправить mymath.info/math/show.php
-	if ($olymp == "msu")
+	if ($olymp == "republic")
 		for ($y = 2014; $y <= 2020; $y++)
 
 ============================
