@@ -22,9 +22,24 @@
 	\end{center}
 }
 
+\usepackage[explicit]{titlesec}
+\titleformat{\section}{\normalfont\bfseries\center}{}{1em}{#1}
+\titleformat{\subsection}{\normalfont\bfseries\center}{}{1em}{#1}
+
+
+\renewpagestyle{headings}{
+\sethead[][][]
+{}{\subsectiontitle}{}
+\headrule
+\setfoot[\thepage][][]
+{}{}{\thepage}
+}
+
 \begin{document}
 
 \newpage
+
+\pagestyle{headings}
 
 \addcontentsline{toc}{section}{О республиканской олимпиаде}
 
